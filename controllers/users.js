@@ -36,6 +36,8 @@ module.exports.updateProfile = (req, res, next) => {
     .catch((err) => {
       if (err.message === 'NotValidId') {
         next(new NotFoundError('Пользователь с таким id не найден'));
+      } else if (err.code === 11000) {
+        next(new ConflictError('Пользователь с таким email уже зарегистрирован'));
       } else if (err.name === 'ValidationError') {
         next(new BadRequestError(err.message));
       } else {
