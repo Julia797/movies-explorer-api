@@ -6,14 +6,10 @@ const movieSchema = new mongoose.Schema(
     country: {
       type: String,
       required: [true, 'Необходимо заполнить поле "country"'],
-      minlength: [2, 'Минимальная длина — 2 символа'],
-      maxlength: [30, 'Максимальная длина — 30 символов'],
     },
     director: {
       type: String,
       required: [true, 'Необходимо заполнить поле "director"'],
-      minlength: [2, 'Минимальная длина — 2 символа'],
-      maxlength: [30, 'Максимальная длина — 30 символов'],
     },
     duration: {
       type: Number,
@@ -32,8 +28,6 @@ const movieSchema = new mongoose.Schema(
     description: {
       type: String,
       required: [true, 'Необходимо заполнить поле "description"'],
-      minlength: [2, 'Минимальная длина — 2 символа'],
-      maxlength: [30, 'Максимальная длина — 30 символов'],
     },
     image: {
       type: String,
@@ -78,14 +72,10 @@ const movieSchema = new mongoose.Schema(
     nameRU: {
       type: String,
       required: [true, 'Необходимо заполнить поле "nameRU"'],
-      minlength: [2, 'Минимальная длина — 2 символа'],
-      maxlength: [30, 'Максимальная длина — 30 символов'],
     },
     nameEN: {
       type: String,
       required: [true, 'Необходимо заполнить поле "nameEN"'],
-      minlength: [2, 'Минимальная длина — 2 символа'],
-      maxlength: [30, 'Максимальная длина — 30 символов'],
     },
     createdAt: {
       type: Date,
